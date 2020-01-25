@@ -89,6 +89,11 @@ module.exports = class Descriptografar {
                 continue
             }
 
+            if (letraText == ',') {
+                ArrayLetras.push(letraText)
+                continue
+            }
+
             for (let num of number) {
                 if (num === letraText) {
                     ArrayLetras.push(letraText)
@@ -109,7 +114,7 @@ module.exports = class Descriptografar {
                 }
             }
         }
-        let textoFinal = ArrayLetras.join().replace(/\,/g, '')
+        let textoFinal = ArrayLetras.join('')
         return textoFinal
     }
 }
