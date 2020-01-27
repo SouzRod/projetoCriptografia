@@ -78,22 +78,12 @@ module.exports = class Descriptografar {
         let ArrayLetras = []
 
         for (let letraText of textoSplitado) {
-            if (letraText == ' ') {
+
+            if (letraText == ' ' || letraText == '.' || letraText == ',' || letraText == '!' || letraText == '?') {
                 ArrayLetras.push(letraText)
                 continue
             }
-
-
-            if (letraText == '.' || letraText == ',' || letraText == '!' || letraText == '?') {
-                ArrayLetras.push(letraText)
-                continue
-            }
-
-            if (letraText == ',') {
-                ArrayLetras.push(letraText)
-                continue
-            }
-
+            
             for (let num of number) {
                 if (num === letraText) {
                     ArrayLetras.push(letraText)
