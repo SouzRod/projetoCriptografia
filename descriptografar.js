@@ -84,7 +84,7 @@ module.exports = class Descriptografar {
             }
 
 
-            if (letraText == '.') {
+            if (letraText == '.' || letraText == ',' || letraText == '!' || letraText == '?') {
                 ArrayLetras.push(letraText)
                 continue
             }
